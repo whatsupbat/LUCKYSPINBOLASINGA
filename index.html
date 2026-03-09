@@ -281,21 +281,53 @@ const segments = [
 
 // --- DATA KODE REDEEM ---
 let validCodes = {
-"SINGA123": false,
-"GACOR": false,
-"BOLASINGA": false,
-"FREE": false,
-"KODE001": false,
-"KODE002": false,
-"KODE003": false,
-"KODE004": false,
-"KODE005": false
+"Z4M7Q5P2KB": false,
+"M4P8ZK6TQ2": false,
+"R9X3W7JH5A": false,
+"D2L8Q7M4YB": false,
+"T6N3K9P2XZ": false,
+"A5H8R1M7QK": false,
+"Y7D3XK6P9A": false,
+"J1W8N5ZQ4T": false,
+"L8T4Z1K6DY": false,
+"P9B2Q7M4XJ": false,
+"C5K8A3Z9LT": false,
+"N7M2X6Q4JP": false,
+"H1T9K4L7YA": false,
+"Z3P6Q8M1XR": false,
+"Y4B7T2K9AQ": false,
+"J6L8M3Z5PD": false,
+"Q2N9X4T7BK": false,
+"V8A3K1M6ZQ": false,
+"X5Q7L2T9PA": false,
+"K4D8N1M7QZ": false,
+"M9B3T6X1QA": false,
+"P2Z7A4K8QM": false,
+"L2X8K5Q3AT": false,
+"Z9M4Q7P1KB": false,
+"N3Q6A8T5LX": false,
+"Q7L2M9X4AP": false,
+"X1T6Z3Q8KB": false,
+"M6Q1X8T5ZB": false,
+"Z5T8Q4M1XA": false,
+"N1M6Q7P9KB": false,
+"Q2A5X8L3MT": false,
+"X4Q7T1Z9KA": false,
+"K7M3P6Q2LA": false,
+"M1T9X4Q8ZB": false,
+"P5Q2A7L6MK": false,
+"L9X3K1T8QA": false,
+"Q6M3A7X9PB": false
 };
 
 // load dari localStorage
 const savedCodes = localStorage.getItem("usedCodes");
+
 if(savedCodes){
-validCodes = JSON.parse(savedCodes);
+const parsed = JSON.parse(savedCodes);
+
+// gabungkan kode lama dengan kode baru
+validCodes = {...validCodes, ...parsed};
 }
 
 // --- VARIABEL ---
